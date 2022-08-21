@@ -66,9 +66,9 @@
 		<button type="submit">What's the temperature dude?</button>
 	</form>
 
-	<div class="result-container">
-		<div>
-			{#if isFetching}
+	{#if isFetching}
+		<div class="result-container">
+			<div>
 				<div class="searched-city">
 					<Icon name="map" height="38" width="38" />
 					{searchedCity}
@@ -85,11 +85,13 @@
 					<div><Icon name="humidity" height="28" width="28" />{humidity}%</div>
 					<div><Icon name="wind" height="28" width="28" />{wind}</div>
 				</div>
-			{:else if isError}
-				<p>Wrong city entered. Please enter correct city</p>
-			{/if}
+			</div>
 		</div>
-	</div>
+	{:else if isError}
+		<div class="result-container">
+			<p style="text-align: center;">Wrong city entered. Please enter a correct city</p>
+		</div>
+	{/if}
 </div>
 
 <style lang="scss">
