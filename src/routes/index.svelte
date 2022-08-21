@@ -121,8 +121,12 @@
 
 			> div {
 				padding: 20px;
+
 				> div:not(:last-child) {
-					margin-bottom: 35px;
+					margin-bottom: 40px;
+				}
+				> div:first-child {
+					margin-bottom: 25px;
 				}
 			}
 
