@@ -41,7 +41,7 @@
 	}
 
 	const handleSubmit = (event: SubmitEvent) => {
-		const formData = new FormData(event?.target);
+		const formData = new FormData(event?.target as HTMLFormElement);
 		const data = {};
 		for (let field of formData) {
 			const [key, value] = field;
@@ -62,8 +62,10 @@
 			type="text"
 			name="searchedCity"
 			required
+			pattern="[A-Za-z]"
+			title="Type in your city name correctly"
 		/>
-		<button type="submit">What's the temperature dude?</button>
+		<button type="submit">Show me the temperature</button>
 	</form>
 
 	{#if isFetching}
