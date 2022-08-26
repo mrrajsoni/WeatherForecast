@@ -62,7 +62,6 @@
 			type="text"
 			name="searchedCity"
 			required
-			pattern="[A-Za-z]"
 			title="Type in your city name correctly"
 		/>
 		<button type="submit">Show me the temperature</button>
