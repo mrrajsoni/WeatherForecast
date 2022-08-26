@@ -13,7 +13,7 @@
 
 	async function getCurrentlat() {
 		await fetch(
-			`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=9f64ce41f1e45219356aea59893d1b67`
+			`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=9f64ce41f1e45219356aea59893d1b67`
 		)
 			.then((latLong) => {
 				return latLong.json();
